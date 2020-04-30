@@ -1,13 +1,13 @@
-package lucky.clover.ui.notifications
+package lucky.clover.ui.photos
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class PhotosViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+        value = "This is photos Fragment"
     }
     val text: LiveData<String> = _text
 }

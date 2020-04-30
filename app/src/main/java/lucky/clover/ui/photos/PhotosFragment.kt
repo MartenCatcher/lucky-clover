@@ -1,4 +1,4 @@
-package lucky.clover.ui.notifications
+package lucky.clover.ui.photos
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import lucky.clover.R
 
-class NotificationsFragment : Fragment() {
+class PhotosFragment : Fragment() {
 
-    private lateinit var notificationsViewModel: NotificationsViewModel
+    private lateinit var photosViewModel: PhotosViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        notificationsViewModel =
-            ViewModelProviders.of(this).get(NotificationsViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_notifications, container, false)
-        val textView: TextView = root.findViewById(R.id.text_notifications)
-        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
+        photosViewModel =
+            ViewModelProviders.of(this).get(PhotosViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_photos, container, false)
+        val textView: TextView = root.findViewById(R.id.text_photos)
+        photosViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

@@ -51,12 +51,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
     }
 
     private fun initMap() {
-        try {
-            MapsInitializer.initialize(activity!!.applicationContext)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-
+        MapsInitializer.initialize(requireActivity().applicationContext)
         mMapView.getMapAsync(this)
     }
 

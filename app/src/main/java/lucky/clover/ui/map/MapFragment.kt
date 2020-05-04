@@ -8,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.google.android.gms.maps.*
@@ -38,8 +37,8 @@ class MapFragment : Fragment(), OnMapReadyCallback {
         val root = inflater.inflate(R.layout.fragment_map, container, false)
 
         mMapView = root.findViewById(R.id.text_map)
-        mMapView.onCreate(savedInstanceState);
-        mMapView.onResume();
+        mMapView.onCreate(savedInstanceState)
+        mMapView.onResume()
 
         getLocationPermission()
 
@@ -100,23 +99,23 @@ class MapFragment : Fragment(), OnMapReadyCallback {
     }
 
     override fun onResume() {
-        super.onResume();
-        mMapView.onResume();
+        super.onResume()
+        mMapView.onResume()
     }
 
     override fun onPause() {
-        super.onPause();
-        mMapView.onPause();
+        super.onPause()
+        mMapView.onPause()
     }
 
     override fun onDestroy() {
-        super.onDestroy();
-        mMapView.onDestroy();
+        super.onDestroy()
+        mMapView.onDestroy()
     }
 
     override fun onLowMemory() {
-        super.onLowMemory();
-        mMapView.onLowMemory();
+        super.onLowMemory()
+        mMapView.onLowMemory()
     }
 
     override fun onMapReady(googleMap: GoogleMap) {

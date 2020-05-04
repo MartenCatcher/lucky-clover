@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
     companion object {
         private const val TAG: String = "MainActivity"
         private const val ERROR_DIALOG_REQUEST = 9001
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
